@@ -1,4 +1,4 @@
 from .keeper import Keeper
 
 
-Keeper.keep()
+Keeper.keep_all()

@@ -10,10 +10,6 @@ ydl_opts = {
 
 class Keeper:
     @staticmethod
-    def download(urls: list[str]):
+    def keep_all():
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            ydl.download(urls)
-
-    @staticmethod
-    def keep():
-        Keeper.download(CONFIG.playlists)
+            ydl.download(CONFIG.playlists)

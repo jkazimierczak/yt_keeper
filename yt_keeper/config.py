@@ -23,6 +23,7 @@ class ConfigModel(BaseModel):
 
 
 def load():
+    """Load configuration from file."""
     with open(f'{RELATIVE_ROOT}/config.yml') as f:
         try:
             return ConfigModel(**yaml.safe_load(f))

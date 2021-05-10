@@ -1,4 +1,10 @@
+import sys
+
 from .keeper import Keeper
 
 
-Keeper.keep_all()
+try:
+    Keeper.keep_all()
+except KeyboardInterrupt:
+    print('Terminating process...')
+    sys.exit(0)

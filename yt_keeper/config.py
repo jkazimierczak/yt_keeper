@@ -22,7 +22,7 @@ class ConfigModel(BaseModel):
         allow_mutation = False
 
 
-def load():
+def load() -> ConfigModel:
     """Load configuration from file."""
     with open(f'{RELATIVE_ROOT}/config.yml') as f:
         try:

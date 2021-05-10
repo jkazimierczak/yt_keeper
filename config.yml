@@ -1,3 +1,4 @@
 output_to: ./downloads
+output_template: '%(playlist)s/%(title)s-%(id)s.%(ext)s'
 playlists:
   - https://youtube.com/playlist?list=PLD954AD90548599FE

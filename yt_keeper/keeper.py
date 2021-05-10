@@ -4,7 +4,7 @@ from . import CONFIG
 
 
 ydl_opts = {
-    'outtmpl': f'{CONFIG.output_to}/%(playlist)s/%(title)s-%(id)s.%(ext)s'
+    'outtmpl': f'{CONFIG.output_to}/{CONFIG.output_template}'
 }
 
 

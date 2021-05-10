@@ -9,6 +9,7 @@ from . import RELATIVE_ROOT
 
 class ConfigModel(BaseModel):
     output_to: str
+    output_template: str
     playlists: conlist(HttpUrl, min_items=1)
 
     @validator('output_to')

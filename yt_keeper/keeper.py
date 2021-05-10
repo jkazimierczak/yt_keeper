@@ -1,10 +1,10 @@
 import youtube_dl
 
-from . import RELATIVE_ROOT
+from . import CONFIG
 
 
 ydl_opts = {
-    'outtmpl': f'{RELATIVE_ROOT}/downloads/%(playlist)s/%(title)s-%(id)s.%(ext)s'
+    'outtmpl': f'{CONFIG.output_to}/%(playlist)s/%(title)s-%(id)s.%(ext)s'
 }
 
 
@@ -16,6 +16,4 @@ class Playlist:
 
     @staticmethod
     def keep():
-        Playlist.download([
-            'https://www.youtube.com/playlist?list=PLD954AD90548599FE'
-        ])
+        Playlist.download(CONFIG.playlists)

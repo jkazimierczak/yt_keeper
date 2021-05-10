@@ -1,4 +1,4 @@
-from .keeper import Playlist
+from .keeper import Keeper
 
 
-Playlist.keep()
+Keeper.keep()

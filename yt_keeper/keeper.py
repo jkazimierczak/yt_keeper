@@ -8,7 +8,7 @@ ydl_opts = {
 }
 
 
-class Playlist:
+class Keeper:
     @staticmethod
     def download(urls: list[str]):
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -16,4 +16,4 @@ class Playlist:
 
     @staticmethod
     def keep():
-        Playlist.download(CONFIG.playlists)
+        Keeper.download(CONFIG.playlists)

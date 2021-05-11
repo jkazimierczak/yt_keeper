@@ -8,7 +8,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="yt_keeper",
-    version="0.0.2",
+    version="0.0.3",
     packages=find_packages(),
     author="Jakub Kazimierczak",
     description="A packaging example",

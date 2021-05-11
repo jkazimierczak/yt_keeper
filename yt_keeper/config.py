@@ -16,7 +16,7 @@ class ConfigModel(BaseModel):
     @validator('output_to')
     def resolve_path(cls, v):
         if not Path(v).is_absolute():
-            v = RELATIVE_ROOT / v
+            v = Path.home() / v
         return Path(v).resolve()
 
     class Config:

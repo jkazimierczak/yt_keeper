@@ -1,9 +1,10 @@
 # Output path = output_to/output_template
 # output_to - This is a parent directory for all of your downloads.
-# In case of relative paths, paths are relative to where this module
-# was installed.
-# Default output path is: <installation path>/downloads
-output_to: ./downloads
+# In case of relative paths, paths are relative to your home directory.
+# Default output path is:
+#   Windows: %userprofile%/Downloads/yt_keeper
+#   Linux: ~/Downloads/yt_keeper
+output_to: ./Downloads/yt_keeper
 # This is a template used by youtube_dl.
 # The default puts each playlist in it's own folder.
 output_template: '%(playlist)s/%(title)s-%(id)s.%(ext)s'

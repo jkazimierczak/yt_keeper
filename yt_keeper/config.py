@@ -28,7 +28,12 @@ def load() -> ConfigModel:
     config_file = pkg_resources.resource_filename(__name__, 'config.yml')
     with open(config_file) as f:
         try:
-            return ConfigModel(**yaml.safe_load(f))
+            config = yaml.safe_load(f)
+            if not config.get('playlists'):
+                print('Add playlists you want to keep to the config and try again.')
+                print(f'Config location: {config_file}')
+                sys.exit(1)
+            return ConfigModel(**config)
         except ValidationError as e:
             print(e)
             sys.exit(1)

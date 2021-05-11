@@ -1,11 +1,8 @@
 import sys
-
-import pkg_resources
-import yaml
 from pathlib import Path
-from pydantic import BaseModel, HttpUrl, ValidationError, conlist, validator
 
-from . import RELATIVE_ROOT
+import yaml
+from pydantic import BaseModel, HttpUrl, ValidationError, conlist, validator
 
 
 class ConfigModel(BaseModel):

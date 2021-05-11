@@ -24,7 +24,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
  - OS: [e.g. Ubuntu 20.04]
- - Version [e.g. 22]
+ - Python version: [e.g. 3.7]
+ - yt_keeper version
 
 **Additional context**
 Add any other context about the problem here. Delete this if not applicable.

@@ -25,7 +25,10 @@ class ConfigModel(BaseModel):
 
 def load() -> ConfigModel:
     """Load configuration from file."""
-    config_file = pkg_resources.resource_filename(__name__, 'config.yml')
+    config_file = Path.home() / '.config' / 'yt_keeper' / 'config.yml'
+    if not config_file.exists():
+        raise FileNotFoundError('Config not found in desired location.')
+
     with open(config_file) as f:
         try:
             config = yaml.safe_load(f)

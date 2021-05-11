@@ -10,4 +10,4 @@ output_template: '%(playlist)s/%(title)s-%(id)s.%(ext)s'
 # These are playlists which will be kept.
 # Videos that already downloaded won't be downloaded again.
 playlists:
-  - https://youtube.com/playlist?list=PLD954AD90548599FE
+#  - your_youtube_playlist_link_here

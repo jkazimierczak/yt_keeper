@@ -1,0 +1,26 @@
+from setuptools import find_packages, setup
+from pathlib import Path
+
+here = Path(__file__).parent.resolve()
+long_description = (here / "README.md").read_text(encoding="utf-8")
+
+setup(
+    name="yt_keeper",
+    version="0.0.1",
+    packages=find_packages(),
+    author="Jakub Kazimierczak",
+    description="A packaging example",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    python_requires=">=3.6",
+    license='MIT',
+    package_data={
+        "yt_keeper": ["config.yml"],
+    },
+    install_requires=["youtube-dl", "pyyaml", "pydantic"],
+    entry_points={
+        "console_scripts": [
+            "yt_keeper=yt_keeper.__main__:main",
+        ],
+    },
+)

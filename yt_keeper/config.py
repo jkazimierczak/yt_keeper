@@ -1,5 +1,6 @@
 import sys
 
+import pkg_resources
 import yaml
 from pathlib import Path
 from pydantic import BaseModel, HttpUrl, ValidationError, conlist, validator
@@ -24,7 +25,8 @@ class ConfigModel(BaseModel):
 
 def load() -> ConfigModel:
     """Load configuration from file."""
-    with open(f'{RELATIVE_ROOT}/config.yml') as f:
+    config_file = pkg_resources.resource_filename(__name__, 'config.yml')
+    with open(config_file) as f:
         try:
             return ConfigModel(**yaml.safe_load(f))
         except ValidationError as e:
